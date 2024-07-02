@@ -12,8 +12,6 @@ app.use(json());
 app.use(cors());
 
 
-
-app.use(cors());
 async function main() {
   // Connect the client
   await prisma.$connect()
@@ -195,9 +193,5 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
-
-app.listen(port, () => {
-  console.log(`Server running on port: ${port}`);
-})
 
 
